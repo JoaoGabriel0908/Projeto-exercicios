@@ -39,5 +39,11 @@ function operacaoMatematica($numero1, $numero2, $operacao){
     $result = number_format($result, 2);
 
     return $result;
+
+    // Função para a tabuada
+    function multiplicar($numero1,$numero2){
+        $num1 = (int) $numero1;
+        $num2 = (int) $numero2;
+    }
 }
 ?>

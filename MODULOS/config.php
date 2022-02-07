@@ -15,5 +15,6 @@ define('ERRO_MSG_CAIXA_VAZIA', '<script> alert("Favor preencher todas as caixas!
 const ERRO_MSG_OPERACAO_CALCULO = '<script> alert("Favor escolher uma operação válida") </script>';
 const ERRO_MSG_CARACTER_INVALIDO_TEXTO = '<script> alert("Não é possível realizar calculos com dados não númericos!") </script>';
 const ERRO_MSG_DIVISAO_ZERO = '<script> alert("Não é possível realizar uma divisão onde o valor 2 seja igual a 0") </script>';
+const ERRO_MSG_INICIAL_MAIOR= '<script> alert("O número inicial não pode ser maior que o número final") </script>';
 
 ?>

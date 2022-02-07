@@ -66,7 +66,6 @@
                         </div>
                     </div>
                 </form>
-
             </div>
             <footer id="resultado">
                 A média é:<?php echo($media);?>  

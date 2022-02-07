@@ -12,10 +12,10 @@
 // Require_once()
 
 // Import do arquivo de configurações de variáveis e constantes
-require_once('modulo/config.php');
+require_once('modulos/config.php');
 
 // Import do arquivo funções para cálculos matemáticos
-require_once('modulo/calculos.php');
+require_once('modulos/calculos.php');
 
 // Declaração de variáveis
 $valor1 = (float) 0;
@@ -64,7 +64,6 @@ if (isset($_POST['btncalc'])) {
 
 				// Chamada da função de calculos matemáticos, passamos os valores e o
 				// tipo da operação recebemos o valor do resultado
-
 				$resultado = operacaoMatematica($valor1, $valor2, $opcao);
 			}
 		}
