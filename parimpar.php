@@ -6,7 +6,8 @@ require_once('./modulos/calculos.php');
 
 $inicial = (int) 0;
 $final = (int) 0;
-$resultado = (int) 0;
+$resultadoPar = (int) 0;
+$resultadoImpar = (int) 0;
 
 // Verificando se o botão foi clicado
 if (isset($_POST['btnCalc'])) {
@@ -17,11 +18,11 @@ if (isset($_POST['btnCalc'])) {
     // Validando se o número inicial é maior que o final
     if ($inicial < $final) {
 
-        if ($_POST['txtn1'] == "" || $_POST['txtn2'] == "")
+        if ($_POST['sltInicial'] == "" || $_POST['sltFinal'] == "")
             echo (ERRO_MSG_CAIXA_VAZIA);
         else {
-
-            $resultado = parImpar($inicial, $final);
+            $resultadoPar = par($inicial, $final);
+            $resultadoImpar = impar($inicial, $final);
         }
     } else
         echo (ERRO_MSG_INICIAL_MAIOR);
@@ -80,7 +81,8 @@ if (isset($_POST['btnCalc'])) {
         </form>
     </section>
     <footer id="resultado">
-        <?= $resultado; ?>
+        <h1>Resultado</h1><?= $resultadoPar;?>
+        <h1>Resultado</h1><?= $resultadoImpar;?>
     </footer>
 </body>
 

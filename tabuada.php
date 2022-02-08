@@ -27,11 +27,12 @@ if (isset($_POST['btnCalc'])) {
             echo (ERRO_MSG_CARACTER_INVALIDO_TEXTO);
         else {
 
+            // Validação da tabuada acima do 0
             if($tabuada == 0 || $multiplicadorMax == 0)
                 echo (ERRO_MSG_TABUADA_ZERO);
             else
             // Realizando a multiplicação
-            $resultado = multiplicar($tabuada, $multiplicadorMax, $contador);
+            $resultado = multiplicar($tabuada, $multiplicadorMax);
         }
     }
 }
@@ -67,7 +68,7 @@ if (isset($_POST['btnCalc'])) {
         </form>
     </section>
     <footer id="resultado">
-        <?= $resultado; ?>
+        <?php echo ($resultado); ?>
     </footer>
 </body>
 

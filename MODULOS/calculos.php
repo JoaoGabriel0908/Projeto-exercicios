@@ -42,23 +42,24 @@ function operacaoMatematica($numero1, $numero2, $operacao)
     return $result;
 }
 // Função para a tabuada
-function multiplicar($numerador, $multiplicador, $cont)
+function multiplicar($numerador, $multiplicador)
 {
     // Declaração das variaveis
     $num1 = (int) $numerador;
     $num2 = (int) $multiplicador;
-    $contador = (int) $cont;
+    $contador = (int) 0;
     $result = (int) 0;
+    $resultado = (int) null;
 
     while ($contador <= $num2) {
-        echo ("$num1 X $contador = " . ($num1 * $contador));
-        echo "<br>";
+        $result = $num1 * $contador;
+        $resultado = $resultado . ("$num1 X $contador = " . ("$result") . '<br/>');
         $contador++;
     }
-    return $result;
+    return $resultado;
 }
 // Função para números Pares ou Ímpares
-function parImpar($numero1, $numero2)
+function par($numero1, $numero2)
 {
     // Declaração de variaveis
     $num1 = (int) $numero1;
@@ -68,17 +69,30 @@ function parImpar($numero1, $numero2)
     // Função para encontrar os números pares e ímpares
     while ($num1 <= $num2) {
         if ($num1 % 2 == 0) {
-            echo (' Resultado é par ' . $num1 . '');
-            $num1 += 1;
-        } elseif ($num1 % 2 == 1) {
-            echo (' Resultado é ímpar ' . $num1 . '');
-            $num1 += 1;
+            $result = $result . (' Resultado é par ' . $num1 . '' . '<br/>');
         }
+        $num1 += 1;
+    }
+    return $result;
+}
+// Função para calcular os números ímpares
+function impar($numero1, $numero2)
+{
+    // Declaração das variaveis
+    $num1 = (int) $numero1;
+    $num2 = (int) $numero2;
+    $result = (int) 0;
+
+    while ($num1 <= $num2) {
+        if($num1 % 2 ==1){
+            $result = $result . ('Resultado é ímpar' . $num1 . '' . '<br/>');
+        }
+        $num1 += 1;
     }
     return $result;
 }
 // Função para calcular as médias
-function calcularMedia($numero1,$numero2,$numero3,$numero4,$media)
+function calcularMedia($numero1, $numero2, $numero3, $numero4, $media)
 {
     // Declaração das variaveis
     $num1 = (int) $numero1;
@@ -88,7 +102,7 @@ function calcularMedia($numero1,$numero2,$numero3,$numero4,$media)
     $media = (int) 0;
 
     // Realizando calculo da média
-    $media = ($num1 + $num2 + $num3 + $num4) / 4; 
+    $media = ($num1 + $num2 + $num3 + $num4) / 4;
 
     return $media;
 }
