@@ -2,15 +2,17 @@
 // Import do arquivo de configurações
 require_once('./MODULOS/config.php');
 
+require_once('./modulos/calculos.php');
+
 // Declaração de variaveis
 $tabuada = (int) 0;
 $multiplicadorMax = (int) 0;
 $contador = (int) 0;
-$resultado = (string) null;
+$resultado = (int) 0;
 
 // Validando o botão calcular
-if (isset($_POST['btnCalc'])) 
-{
+if (isset($_POST['btnCalc'])) {
+
     // Recebendo os dados do formulário
     $tabuada = $_POST['txtn1'];
     $multiplicadorMax = $_POST['txtn2'];
@@ -20,17 +22,16 @@ if (isset($_POST['btnCalc']))
         echo (ERRO_MSG_CAIXA_VAZIA);
     else {
 
-        // Validando se há ou não números nas caixas
+        // Validação de tratamento para a entrada de strings ao invés de números
         if (!is_numeric($tabuada) || !is_numeric($multiplicadorMax))
-				echo (ERRO_MSG_CARACTER_INVALIDO_TEXTO);
-			else {
+            echo (ERRO_MSG_CARACTER_INVALIDO_TEXTO);
+        else {
 
-        // Realizando a multiplicação
-        while ($contador <= $multiplicadorMax) {
-            echo ("$tabuada X $contador = " . ($tabuada * $contador));
-            echo "<br>";
-            $contador++;
-        }
+            if($tabuada == 0 || $multiplicadorMax == 0)
+                echo (ERRO_MSG_TABUADA_ZERO);
+            else
+            // Realizando a multiplicação
+            $resultado = multiplicar($tabuada, $multiplicadorMax, $contador);
         }
     }
 }
@@ -42,6 +43,7 @@ if (isset($_POST['btnCalc']))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tabuada.css">
     <title>Document</title>
 </head>
 
@@ -49,23 +51,23 @@ if (isset($_POST['btnCalc']))
     <section id="form">
         <form name="frmTabuada" action="tabuada.php" method="POST">
             <div>
-                <h1>Numerador: <input type="text" name="txtn1" value=""></h1>
+                <h1>Numerador: <input type="text" name="txtn1" value="<?=$tabuada?>"></h1>
             </div>
             <div>
-                <h1>Contador:<input type="text" name="txtn2" value=""></h1>
+                <h1>Contador:<input type="text" name="txtn2" value="<?=$multiplicadorMax?>"></h1>
             </div>
             <div>
                 <input type="submit" name="btnCalc" value="Calcular">
                 <div id="botaoReset">
                     <a href="tabuada.php">
-                        Novo Cálculo
+                        <input type="submit" name="reset" value="Novo cálculo">
                     </a>
                 </div>
             </div>
         </form>
     </section>
     <footer id="resultado">
-
+        <?= $resultado; ?>
     </footer>
 </body>
 

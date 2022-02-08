@@ -2,8 +2,10 @@
 
 require_once('modulos/config.php');
 
-$num1 = (int) 0;
-$num2 = (int) 0;
+require_once('./modulos/calculos.php');
+
+$inicial = (int) 0;
+$final = (int) 0;
 $resultado = (int) 0;
 
 // Verificando se o botão foi clicado
@@ -15,15 +17,11 @@ if (isset($_POST['btnCalc'])) {
     // Validando se o número inicial é maior que o final
     if ($inicial < $final) {
 
-        // Função para encontrar os números pares e ímpares
-        while ($inicial <= $final) {
-            if ($inicial % 2 == 0) {
-                echo (' Resultado é par ' . $inicial . '');
-                $inicial += 1;
-            } elseif ($inicial % 2 == 1) {
-                echo (' Resultado é ímpar ' . $inicial . '');
-                $inicial += 1;
-            }
+        if ($_POST['txtn1'] == "" || $_POST['txtn2'] == "")
+            echo (ERRO_MSG_CAIXA_VAZIA);
+        else {
+
+            $resultado = parImpar($inicial, $final);
         }
     } else
         echo (ERRO_MSG_INICIAL_MAIOR);
@@ -82,7 +80,7 @@ if (isset($_POST['btnCalc'])) {
         </form>
     </section>
     <footer id="resultado">
-    <?= $resultado; ?>        
+        <?= $resultado; ?>
     </footer>
 </body>
 
