@@ -1,10 +1,9 @@
 body{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-image: url(../imgs/educ.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     background-blend-mode: darken;
     display: flex;
     flex-direction: column;
@@ -14,9 +13,15 @@ body{
     box-sizing: border-box;
     margin: 0;
 }
+.titulo{
+    text-align: end;
+}
+.texto{
+    
+}
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: 0.5s;
     cursor: pointer;
     font-family: 'Sora', sans-serif;
@@ -32,15 +37,16 @@ a:hover{
 .menu{
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    background-color: white;
-    height: 20vh;
+    background-color: #0000009d;
+    height: 25vh;
 }
 .dropdown-menu{
     position: fixed;
-    width: 20%;
-    top: 130px;
+    width: 25vw;
+    top: 25vh;
     list-style: none;
     display: flex;
     right: -100%;
@@ -48,17 +54,26 @@ a:hover{
     transition: all .5s;
     flex-direction: column;
     align-items: center;
-    background-color: orange;
+    background-color: #0000009d;
+    height: 80vh;
+    align-items: center;
+}
+.dropdown-menu a img{
+ 
 }
 .dropdown-menu li{
     letter-spacing: 3px;
     display: block;
     margin: 20px;
     line-height: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
 }
 .dropdown-menu li img{
     background-size: cover;
     height: 50px;
+    align-items: center;
 }
 .container{
     display: flex;
@@ -87,7 +102,7 @@ label span{
     width: 100%;
     display: block;
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.651);
+    background-color: rgb(255, 255, 255);
     transition: 0.5s ease-in-out;
 }
 label span:nth-child(1){
@@ -121,6 +136,29 @@ label span:nth-child(3){
 main{
     display: flex;
 }
+.cards{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.cards div{
+    background-color: whitesmoke;
+    box-shadow: 0px 5px  50px #111111a8;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.cards div h1{
+    padding: 30px;
+}
+.cards img{
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+}
+/* Footer */
 footer{
     display: flex;
     position: relative;
