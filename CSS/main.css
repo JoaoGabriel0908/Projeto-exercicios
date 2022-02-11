@@ -17,6 +17,13 @@ body{
     text-align: end;
 }
 .texto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.texto img{
+    width: 75px;
     
 }
 a{
@@ -59,14 +66,14 @@ a:hover{
     align-items: center;
 }
 .dropdown-menu a img{
- 
+    width: 50px;
+    
 }
 .dropdown-menu li{
     letter-spacing: 3px;
     display: block;
-    margin: 20px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -115,14 +122,14 @@ label span:nth-child(3){
     top: 16px;
 }
 #checkbox-menu:checked + label span:nth-child(1){
-    transform: rotate(-45deg);
+    transform: rotate(-405deg);
     top: 8px;
 }
 #checkbox-menu:checked + label span:nth-child(2){
     opacity: 0;
 }
 #checkbox-menu:checked + label span:nth-child(3){
-    transform: rotate(45deg);
+    transform: rotate(405deg);
     top: 8px;
 }
 #checkbox-menu:checked ~ ul{
@@ -136,10 +143,13 @@ label span:nth-child(3){
 main{
     display: flex;
 }
+section{
+}
 .cards{
     display: flex;
-    padding: 20px;
-    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 300px;
+    gap: 50px 100px;
 }
 .cards div{
     background-color: whitesmoke;
@@ -148,7 +158,8 @@ main{
     padding: 10px;
     align-items: center;
     text-align: center;
-    width: 100%;
+    display: block;
+    width: 600px;
 }
 .cards div h1{
     padding: 30px;

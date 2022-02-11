@@ -42,7 +42,7 @@ if (isset($_POST['btncalc'])) {
 
 <head>
     <title>Média</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
     <meta charset="utf-8">
 </head>
 

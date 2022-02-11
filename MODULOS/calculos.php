@@ -49,7 +49,7 @@ function multiplicar($numerador, $multiplicador)
     $num2 = (int) $multiplicador;
     $contador = (int) 0;
     $result = (int) 0;
-    $resultado = (int) null;
+    $resultado = (string) null;
 
     while ($contador <= $num2) {
         $result = $num1 * $contador;

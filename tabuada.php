@@ -8,7 +8,7 @@ require_once('./modulos/calculos.php');
 $tabuada = (int) 0;
 $multiplicadorMax = (int) 0;
 $contador = (int) 0;
-$resultado = (int) 0;
+$resultado = (string) null;
 
 // Validando o botão calcular
 if (isset($_POST['btnCalc'])) {
@@ -16,6 +16,7 @@ if (isset($_POST['btnCalc'])) {
     // Recebendo os dados do formulário
     $tabuada = $_POST['txtn1'];
     $multiplicadorMax = $_POST['txtn2'];
+    $resultado = "";
 
     // Validando caixa vazia
     if ($_POST['txtn1'] == "" || $_POST['txtn2'] == "")

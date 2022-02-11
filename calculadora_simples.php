@@ -74,35 +74,81 @@ if (isset($_POST['btncalc'])) {
 
 <head>
 	<title>Calculadora - Simples</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/calculadora.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-
-	<div id="conteudo">
-		<div id="titulo">
-			Calculadora Simples
-		</div>
-
-		<div id="form">
-			<form name="frmcalculadora" method="post" action="calculadora_simples.php">
+	<header>
+		<nav class="menu">
+			<div class="texto">
+			<h1></h1>
+				<a class="titulo">Calculadora Simples</a>
+				<img src="imgs/calculadora (2).png" alt="">
+			</h1>
+			</div>
+			
+			<div class="container">
+				<input type="checkbox" id="checkbox-menu">
+				<label for="checkbox-menu">
+					<span class="line1"></span>
+					<span class="line2"></span>
+					<span class="line3"></span>
+				</label>
+				<ul class="dropdown-menu" id="dropdown-menu">
+					<li>
+                        <a href="index.html">
+                            <img src="imgs/casinha-de-cachorro (1).png" alt="">
+                        </a>
+					</li>
+					<li>
+						<a href="calculadora_simples.php">
+							<img src="imgs/calculadora (2).png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="media.php">
+							<img src="imgs/divisao.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="tabuada.php">
+							<img src="imgs/multiplicacao (1).png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="parimpar.php">
+							<img src="imgs/vitoria.png" alt="">
+							<img src="imgs/toque.png" alt="">
+						</a>
+					</li>
+				</ul>
+		</nav>
+	</header>
+	<div id="form">
+		<form name="frmcalculadora" method="post" action="calculadora_simples.php">
+			
 				Valor 1:<input type="text" name="txtn1" value="<?= $valor1 ?>"> <br>
+			
 				Valor 2:<input type="text" name="txtn2" value="<?= $valor2 ?>"> <br>
-				<div id="container_opcoes">
-					<input type="radio" name="rdocalc" value="somar" <?= $opcao == 'SOMAR' ? 'checked' : null; ?>>Somar <br>
-					<input type="radio" name="rdocalc" value="subtrair" <?= $opcao == 'SUBTRAIR' ? 'checked' : null; ?>>Subtrair <br>
-					<input type="radio" name="rdocalc" value="multiplicar" <?= $opcao == 'MULTIPLICAR' ? 'checked' : null; ?>>Multiplicar <br>
-					<input type="radio" name="rdocalc" value="dividir" <?= $opcao == 'DIVIDIR' ? 'checked' : null; ?>>Dividir <br>
+			<div id="container_opcoes">
+				<input type="radio" name="rdocalc" value="somar" <?= $opcao == 'SOMAR' ? 'checked' : null; ?>>Somar <br>
+				<input type="radio" name="rdocalc" value="subtrair" <?= $opcao == 'SUBTRAIR' ? 'checked' : null; ?>>Subtrair <br>
+				<input type="radio" name="rdocalc" value="multiplicar" <?= $opcao == 'MULTIPLICAR' ? 'checked' : null; ?>>Multiplicar <br>
+				<input type="radio" name="rdocalc" value="dividir" <?= $opcao == 'DIVIDIR' ? 'checked' : null; ?>>Dividir <br>
 
-					<input type="submit" name="btncalc" value="Calcular">
+				<input type="submit" name="btncalc" value="Calcular">
 
-				</div>
-				<div id="resultado">
-					<?= $resultado; ?>
-				</div>
+			</div>
+			<div id="resultado">
+				<?= $resultado; ?>
+			</div>
 
-			</form>
-		</div>
+		</form>
+	</div>
 
 	</div>
 
