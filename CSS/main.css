@@ -72,10 +72,9 @@ a:hover{
     
 }
 .dropdown-menu li{
-    letter-spacing: 3px;
     display: block;
     line-height: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 6vh;
     justify-content: center;
     align-items: center;
 }
