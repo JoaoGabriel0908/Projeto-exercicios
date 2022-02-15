@@ -50,12 +50,23 @@ a:hover{
     justify-content: space-around;
     align-items: center;
     background-color: #0000009d;
-    height: 25vh;
+    height: 22vh;
+    gap: 7rem;
+}
+#home{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0000009d;
+    height: 22vh;
 }
 .dropdown-menu{
     position: fixed;
-    width: 25vw;
-    top: 25vh;
+    width: 10vw;
+    top: 0vh;
     list-style: none;
     display: flex;
     right: -100%;
@@ -63,20 +74,22 @@ a:hover{
     transition: all .5s;
     flex-direction: column;
     align-items: center;
-    background-color: #0000009d;
-    height: 80vh;
+    background-color: #00000002;
+    height: 100%;
     align-items: center;
+    gap: 7vh;
+    margin-top: 4rem;
 }
 .dropdown-menu a img{
     width: 3rem;
     
 }
+
 .dropdown-menu li{
-    display: block;
     line-height: 30px;
-    margin-bottom: 6vh;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
 }
 .dropdown-menu li img{
     background-size: cover;
@@ -103,6 +116,7 @@ label{
     display: block;
     height: 20px;
     width: 40px;
+ 
 }
 label span{
     position: absolute ;

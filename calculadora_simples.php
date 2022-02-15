@@ -79,18 +79,21 @@ if (isset($_POST['btncalc'])) {
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
 		<nav class="menu">
 			<div class="texto">
-			<h1></h1>
+				<h1></h1>
 				<a class="titulo">Calculadora Simples</a>
 				<img src="imgs/calculadora (2).png" alt="">
-			</h1>
+				</h1>
 			</div>
-			
+
 			<div class="container">
 				<input type="checkbox" id="checkbox-menu">
 				<label for="checkbox-menu">
@@ -99,27 +102,27 @@ if (isset($_POST['btncalc'])) {
 					<span class="line3"></span>
 				</label>
 				<ul class="dropdown-menu" id="dropdown-menu">
-					<li>
-                        <a href="index.html">
-                            <img src="imgs/casinha-de-cachorro (1).png" alt="">
-                        </a>
+					<li class="list">
+						<a href="index.html">
+							<img src="imgs/casinha-de-cachorro (1).png" alt="">
+						</a>
 					</li>
-					<li>
+					<li class="list">
 						<a href="calculadora_simples.php">
 							<img src="imgs/calculadora (2).png" alt="">
 						</a>
 					</li>
-					<li>
+					<li class="list">
 						<a href="media.php">
 							<img src="imgs/divisao.png" alt="">
 						</a>
 					</li>
-					<li>
+					<li class="list">
 						<a href="tabuada.php">
 							<img src="imgs/multiplicacao (1).png" alt="">
 						</a>
 					</li>
-					<li>
+					<li class="list">
 						<a href="parimpar.php">
 							<img src="imgs/vitoria.png" alt="">
 							<img src="imgs/toque.png" alt="">
@@ -130,18 +133,20 @@ if (isset($_POST['btncalc'])) {
 	</header>
 	<div id="form">
 		<form name="frmcalculadora" method="post" action="calculadora_simples.php">
-			
-				Valor 1:<input type="text" name="txtn1" value="<?= $valor1 ?>"> <br>
-			
-				Valor 2:<input type="text" name="txtn2" value="<?= $valor2 ?>"> <br>
+			<div class="valores">
+				<p>Valor 1:</p>
+				<input type="text" name="txtn1" class="txt" value="<?= $valor1 ?>">
+				<p>Valor 2:</p>
+				<input type="text" name="txtn2" class="txt" value="<?= $valor2 ?>">	
+			</div>
 			<div id="container_opcoes">
-				<input type="radio" name="rdocalc" value="somar" <?= $opcao == 'SOMAR' ? 'checked' : null; ?>>Somar <br>
-				<input type="radio" name="rdocalc" value="subtrair" <?= $opcao == 'SUBTRAIR' ? 'checked' : null; ?>>Subtrair <br>
-				<input type="radio" name="rdocalc" value="multiplicar" <?= $opcao == 'MULTIPLICAR' ? 'checked' : null; ?>>Multiplicar <br>
-				<input type="radio" name="rdocalc" value="dividir" <?= $opcao == 'DIVIDIR' ? 'checked' : null; ?>>Dividir <br>
+			<h1 class="escolha">Escolha a operação do cálculo</h1>
+				<p><input type="radio" name="rdocalc" value="somar" <?= $opcao == 'SOMAR' ? 'checked' : null; ?>>Somar <br></p>
+				<p><input type="radio" name="rdocalc" value="subtrair" <?= $opcao == 'SUBTRAIR' ? 'checked' : null; ?>>Subtrair <br></p>
+				<p><input type="radio" name="rdocalc" value="multiplicar" <?= $opcao == 'MULTIPLICAR' ? 'checked' : null; ?>>Multiplicar <br></p>
+				<p><input type="radio" name="rdocalc" value="dividir" <?= $opcao == 'DIVIDIR' ? 'checked' : null; ?>>Dividir <br></p>
 
-				<input type="submit" name="btncalc" value="Calcular">
-
+				<input type="submit" name="btncalc" value="Calcular" class="button">
 			</div>
 			<div id="resultado">
 				<?= $resultado; ?>
