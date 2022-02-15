@@ -53,7 +53,8 @@ if (isset($_POST['btnCalc'])) {
 <body>
     <nav class="menu" id="menu">
         <h1 class="texto">
-            <a href="index.html" class="titulo">Clique no menu hamburguer para escolher o cálculo</a>
+            <a href="index.html" class="titulo">Tabuada</a>
+            <img src="imgs/multiplicacao (1).png" alt="">
         </h1>
         <div class="container">
             <input type="checkbox" id="checkbox-menu">
@@ -94,13 +95,15 @@ if (isset($_POST['btnCalc'])) {
     </nav>
     <section id="form">
         <form name="frmTabuada" action="tabuada.php" method="POST">
-            <div>
-                <h1>Numerador: <input type="text" name="txtn1" value="<?= $tabuada ?>"></h1>
+            <div id="texto">
+                <h1>Tabuado do: <input type="text" name="txtn1" value="<?= $tabuada ?>"></h1>
+                <h1>X</h1>
+                <h1>Multiplicador: <input type="text" name="txtn2" value="<?= $multiplicadorMax ?>"></h1>
             </div>
-            <div>
-                <h1>Contador:<input type="text" name="txtn2" value="<?= $multiplicadorMax ?>"></h1>
-            </div>
-            <div>
+            <footer id="resultado">
+                <p><?php echo ($resultado); ?></p>
+            </footer>
+            <div id="botoes">
                 <input type="submit" name="btnCalc" value="Calcular">
                 <div id="botaoReset">
                     <a href="tabuada.php">
@@ -110,9 +113,6 @@ if (isset($_POST['btnCalc'])) {
             </div>
         </form>
     </section>
-    <footer id="resultado">
-        <?php echo ($resultado); ?>
-    </footer>
 </body>
 
 </html>

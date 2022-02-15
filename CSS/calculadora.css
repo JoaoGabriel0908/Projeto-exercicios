@@ -17,6 +17,10 @@ h1{
     display: flex;
     justify-content: center;
     padding: 5px;
+    width: 50%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .txt{
@@ -28,17 +32,19 @@ h1{
 p{
     font-family: 'Sora', sans-serif;
     font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 #resultado{
     position: absolute ;
     display: flex;
-    background-color:rgb(150, 187, 187) ;
     font-size: 4rem;
     font-family: 'Roboto Serif', sans-serif;
+    color: rgba(255, 255, 255, 0.87); 
+    gap: 50px;
 }
 .valores{
-    background-color: rgb(150, 187, 187);
+
 }
 
 #container_opcoes .button{
@@ -68,7 +74,12 @@ p{
     font-size: 40px;
     position: relative;
     float: left;
+    background-color: rgb(10, 196, 10);
+    color: ivory;
 } 
 h1{
-    color: black;
+    color: rgba(255, 255, 255, 0.87);
+}
+#resultado p{
+    font-size: 3rem;
 }

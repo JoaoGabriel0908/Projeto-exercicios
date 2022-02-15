@@ -149,9 +149,9 @@ if (isset($_POST['btncalc'])) {
 				<input type="submit" name="btncalc" value="Calcular" class="button">
 			</div>
 			<div id="resultado">
+				<p>Resultado:</p>
 				<?= $resultado; ?>
 			</div>
-
 		</form>
 	</div>
 

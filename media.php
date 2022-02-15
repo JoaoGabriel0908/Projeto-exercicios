@@ -94,7 +94,7 @@ if (isset($_POST['btncalc'])) {
         </nav>
     </header>
     <div id="form">
-        <form name="frmMedia" method="post" action="media.php">
+        <form name="frmMedia" method="post" action="media.php" class="form">
             <div>
                 <label>Nota 1:</label>
                 <input type="text" name="txtn1" value="<?php echo ($nota1); ?>">
@@ -114,11 +114,11 @@ if (isset($_POST['btncalc'])) {
                 <label>Nota 4:</label>
                 <input type="text" name="txtn4" value="<?php echo ($nota4); ?>">
             </div>
-            <div>
+            <div class="butoes">
                 <input type="submit" name="btncalc" value="Calcular">
                 <div id="botaoReset">
                     <a href="media.php">
-                        Novo Cálculo
+                        <input type="button" name="btnReset" value="Novo Cálculo">
                     </a>
                 </div>
             </div>
