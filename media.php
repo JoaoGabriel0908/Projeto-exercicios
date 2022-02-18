@@ -50,12 +50,10 @@ if (isset($_POST['btncalc'])) {
 <body>
     <header id="">
         <nav class="menu">
-            <div class="texto">
-                <h1></h1>
+            <h1 class="texto">
                 <a class="titulo">Cálculo Média</a>
                 <img src="imgs/divisao.png" alt="">
-                </h1>
-            </div>
+            </h1>
             <div class="container">
                 <input type="checkbox" id="checkbox-menu">
                 <label for="checkbox-menu">
@@ -115,7 +113,7 @@ if (isset($_POST['btncalc'])) {
                 <input type="text" name="txtn4" value="<?php echo ($nota4); ?>">
             </div>
             <div class="butoes">
-                <input type="submit" name="btncalc" value="Calcular">
+                <input type="submit" name="btncalc" value="Calcular" class="calc">
                 <div id="botaoReset">
                     <a href="media.php">
                         <input type="button" name="btnReset" value="Novo Cálculo">

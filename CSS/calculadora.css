@@ -76,7 +76,11 @@ p{
     float: left;
     background-color: rgb(10, 196, 10);
     color: ivory;
+    cursor: pointer;
 } 
+.button:hover{
+    transform: scale(1.1);
+}
 h1{
     color: rgba(255, 255, 255, 0.87);
 }

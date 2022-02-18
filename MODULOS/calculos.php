@@ -64,7 +64,7 @@ function par($numero1, $numero2)
     // Declaração de variaveis
     $num1 = (int) $numero1;
     $num2 = (int) $numero2;
-    $result = (int) 0;
+    $result = (string) null;
 
     // Função para encontrar os números pares e ímpares
     while ($num1 <= $num2) {
@@ -81,11 +81,11 @@ function impar($numero1, $numero2)
     // Declaração das variaveis
     $num1 = (int) $numero1;
     $num2 = (int) $numero2;
-    $result = (int) 0;
+    $result = (string) null;
 
     while ($num1 <= $num2) {
         if($num1 % 2 ==1){
-            $result = $result . ('Resultado é ímpar' . $num1 . '' . '<br/>');
+            $result = $result . ('Resultado é ímpar ' . $num1 . '' . '<br/>');
         }
         $num1 += 1;
     }

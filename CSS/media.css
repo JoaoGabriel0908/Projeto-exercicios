@@ -1,4 +1,6 @@
-
+body{
+    height: 100vh;
+}
 #form{
     display: flex;
     justify-content: center;
@@ -42,9 +44,16 @@ label{
     font-family: 'Sora', sans-serif;
     color: azure;
     border-radius: 5%;
+    font-size: 30px;
+}
+.botoes .calc input:hover{
+    transform: scale(1.1);
 }
 .butoes #botaoReset input{
     background-color: rgba(255, 0, 0, 0.815);
+}
+.butoes input:hover{
+    transform: scale(1.1);
 }
 .form label{
     width: inherit;

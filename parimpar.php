@@ -6,8 +6,8 @@ require_once('./modulos/calculos.php');
 
 $inicial = (int) 0;
 $final = (int) 0;
-$resultadoPar = (int) 0;
-$resultadoImpar = (int) 0;
+$resultadoPar = (string) null;
+$resultadoImpar = (string) null;
 
 // Verificando se o botão foi clicado
 if (isset($_POST['btnCalc'])) {
@@ -43,12 +43,10 @@ if (isset($_POST['btnCalc'])) {
 <body>
     <header>
         <nav class="menu">
-            <div class="texto">
-                <h1></h1>
+            <h1 class="texto">
                 <a class="titulo">Pares e Ímpares</a>
                 <img src="imgs/calculadora (2).png" alt="">
-                </h1>
-            </div>
+            </h1>
             <div class="container">
                 <input type="checkbox" id="checkbox-menu">
                 <label for="checkbox-menu">
@@ -88,48 +86,55 @@ if (isset($_POST['btnCalc'])) {
     </header>
     <section id="form">
         <form name="frmTabuada" action="parimpar.php" method="POST">
-            <div>
-                <select name="sltInicial" id="">
-                    <option value="selected">
-                        <h1>Selecione o número inicial</h1>
-                    </option>
-                    <?php
-                    $num1 = 0;
-                    while ($num1 <= 500) {
-                        echo ('<option value="' . $num1 . '">' . $num1 . '</option>');
-                        $num1++;
-                    }
-                    ?>
-                </select>
-            </div>
-            <div>
-                <select name="sltFinal" id="">
-                    <option value="selected">
-                        <h1>Selecione o número final</h1>
-                    </option>
-                    <?php
-                    $num2 = 100;
-                    while ($num2 <= 1000) {
-                        echo ('<option value="' . $num2 . '">' . $num2 . '</option>');
-                        $num2 += 1;
-                    }
-                    ?>
+            <section name="" id="" class="selecao">
+                <div class="">
+                    <select name="sltInicial" id="numInicial">
+                        <option value="selected">
+                            <h1>Selecione o número inicial</h1>
+                        </option>
+                        <?php
+                        $num1 = 0;
+                        while ($num1 <= 500) {
+                            echo ('<option value="' . $num1 . '">' . $num1 . '</option>');
+                            $num1++;
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div>
+                    <select name="sltFinal" id="numFinal">
+                        <option value="selected">
+                            <h1>Selecione o número final</h1>
+                        </option>
+                        <?php
+                        $num2 = 100;
+                        while ($num2 <= 1000) {
+                            echo ('<option value="' . $num2 . '">' . $num2 . '</option>');
+                            $num2 += 1;
+                        }
+                        ?>
 
-                </select>
-            </div>
-            <div>
+                    </select>
+                </div>
+            </section>
+            <section id="resultado">
+                <div class="pares">
+                    <h1>Resultado Pares </h1><?= $resultadoPar; ?>
+                </div>
+                <div class="impares">
+                    <h1>Resultado Ímpares </h1><?= $resultadoImpar; ?>
+                </div>
+            </section>
+            <div id="botoes">
                 <input type="submit" name="btnCalc" value="Calcular">
                 <div id="botaoReset">
                     <a href="tabuada.php">
-                        Novo Cálculo
+                        <input type="submit" name="reset" value="Novo Cálculo">
                     </a>
                 </div>
             </div>
         </form>
-        <section id="resultado">
-            <h1>Resultado Pares</h1><?= $resultadoPar; ?>
-            <h1>Resultado Ímpares</h1><?= $resultadoImpar; ?>
-        </section>
+
     </section>
 </body>
 
