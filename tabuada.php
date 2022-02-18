@@ -93,7 +93,7 @@ if (isset($_POST['btnCalc'])) {
             </ul>
         </div>
     </nav>
-    <section id="form">
+    <div id="form">
         <form name="frmTabuada" action="tabuada.php" method="POST">
             <div id="texto">
                 <h1>Tabuado do: <input type="text" name="txtn1" value="<?= $tabuada ?>"></h1>
@@ -112,7 +112,7 @@ if (isset($_POST['btnCalc'])) {
                 </div>
             </div>
         </form>
-    </section>
+    </div>
 </body>
 
 </html>

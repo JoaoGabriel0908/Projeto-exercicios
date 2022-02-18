@@ -71,7 +71,7 @@ a:hover{
 }
 .dropdown-menu{
     position: fixed;
-    width: 10vw;
+    width: 12vw;
     top: 0vh;
     list-style: none;
     display: flex;
@@ -97,7 +97,7 @@ a:hover{
     align-items: center;
     margin-top: 0px;
 }
-.dropdown-menu li img{
+.dropdown-menu li a img{
     background-size: cover;
     height: 50px;
     align-items: center;
@@ -209,4 +209,12 @@ section{
 footer{
     display: flex;
     position: relative;
+}
+@media (max-width: 700px) {
+    section{
+        width: 70vw;
+    }
+    .dropdown-menu{
+        width: 20vw;
+    }
 }

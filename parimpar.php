@@ -84,7 +84,7 @@ if (isset($_POST['btnCalc'])) {
                 </ul>
         </nav>
     </header>
-    <section id="form">
+    <div id="form">
         <form name="frmTabuada" action="parimpar.php" method="POST">
             <section name="" id="" class="selecao">
                 <div class="">
@@ -135,7 +135,10 @@ if (isset($_POST['btnCalc'])) {
             </div>
         </form>
 
-    </section>
+    </div>
+    <footer>
+        
+    </footer>
 </body>
 
 </html>

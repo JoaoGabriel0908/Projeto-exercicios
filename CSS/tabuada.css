@@ -1,18 +1,16 @@
-body{
-    height: 100vh;
-}
+
 #form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 20px;
+    padding: 1rem;
     align-items: center;
     max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-top: 1rem;
+    border-radius: .5rem;
 }
 #texto{
     display: flex;
@@ -22,7 +20,7 @@ body{
 }
 #texto input{
     width: 100%;
-    max-width: 50px;
+    max-width: 3rem;
     padding: 5px 0px;
     text-align: center;
     border-radius: 5px;
