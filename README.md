@@ -3,7 +3,7 @@ Site de projeto onde realizamos atividades como uma calculadora simples, calcula
 
 ## Objetivo do exercício
 
-Realizar o desenvolvimento de funcionalidades de matemática.
+Realizar o desenvolvimento de funcionalidades de matemática
 
 ## Website
 
@@ -18,4 +18,4 @@ A galeria pode ser acessada pelo link: [Joao Gabriel](https://github.com/JoaoGab
 
 ## Screenshot
 
-![](foto.png)
+![](/imgs/foto.png)
